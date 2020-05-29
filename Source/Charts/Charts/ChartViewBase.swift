@@ -251,6 +251,12 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         setNeedsDisplay()
     }
 
+    /// Removes all indicesToHighlight from the chart.
+    @objc open func clearHighlight()
+    {
+        highlightValue(nil)
+    }
+    
     /// - Returns: `true` if the chart is empty (meaning it's data object is either null or contains no entries).
     @objc open func isEmpty() -> Bool
     {
